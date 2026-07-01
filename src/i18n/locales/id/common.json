@@ -1,0 +1,15 @@
+{
+  "nav": {
+    "about": "Tentang Kami",
+    "donate": "Donasi",
+    "recycle": "Daur Ulang",
+    "contact": "Hubungi Kami",
+    "upload": "Upload Pakaian",
+    "profile": "Buka profil",
+    "signin": "Sign In / Sign Up"
+  },
+  "auth": {
+    "google": "Sign up with Google",
+    "terms": "Dengan mendaftar, kamu setuju dengan Ketentuan Layanan dan Kebijakan Privasi kami."
+  }
+}

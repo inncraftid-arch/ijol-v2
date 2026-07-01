@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brown: #453421;
+  --color-brown-deep: #2b2015;
+  --color-gold: #c99547;
+  --color-gold-soft: #f2b251;
+  --color-cream: #f7f1e8;
+  --color-cream-soft: #fbf7f0;
+  --color-sand: #efe4d6;
+  --color-green: #246e3d;
+  --color-green-deep: #003f11;
+  --color-coral: #f45f52;
+  --color-mist: #f4efe7;
+  --color-ink: #241a11;
+  --color-muted: #8c8176;
+  --color-line: #e8dccd;
+
+  --font-sans: "Plus Jakarta Sans", "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Abril Fatface", Georgia, serif;
+  --font-poppins: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-jakarta: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-soft: 0 22px 55px rgba(69, 52, 33, 0.13);
+  --shadow-card: 0 16px 38px rgba(69, 52, 33, 0.1);
+
+  --height-navbar: 88px;
+  --width-container: 1344px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream-soft font-sans text-ink antialiased;
+  }
+
+  *:focus-visible {
+    @apply outline-2 outline-offset-4 outline-gold;
+  }
+
+  ::selection {
+    @apply bg-gold text-white;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes footer-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes drawer-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@utility animate-float {
+  animation: float 3.2s ease-in-out infinite;
+}
+
+@utility animate-fade-up {
+  animation: fade-up 600ms ease both;
+}
+
+@utility animate-footer-marquee {
+  animation: footer-marquee 42s linear infinite;
+}
+
+@utility animate-drawer-in {
+  animation: drawer-in 280ms ease-out both;
+}
