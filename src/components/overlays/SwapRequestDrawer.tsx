@@ -33,11 +33,9 @@ const SwapItem = ({ index, selected, onSelect }: { index: number; selected?: boo
 };
 
 const SwapRequestDrawer = ({ open, productIndex, onClose }: SwapRequestDrawerProps) => {
-  const [step, setStep] = useState(0);
   const [selectedItems, setSelectedItems] = useState<number[]>([0]);
 
   const closeDrawer = () => {
-    setStep(0);
     setSelectedItems([0]);
     onClose();
   };
@@ -54,33 +52,25 @@ const SwapRequestDrawer = ({ open, productIndex, onClose }: SwapRequestDrawerPro
         <p className="mt-2 text-sm leading-6 text-brown/55">Kamu tertarik dengan item ini? Pilih koleksimu untuk mengajukan swap.</p>
       </div>
 
-      <div className="grid grid-cols-2 border-b border-line bg-cream-soft px-6 sm:px-8">
-        {['Item Tujuan', 'Pilih Koleksi'].map((label, index) => (
-          <div key={label} className={cn('border-b-2 py-4 text-center text-xs font-bold', step === index ? 'border-gold text-gold' : 'border-transparent text-brown/35')}>{index + 1}. {label}</div>
-        ))}
-      </div>
-
-      <div className="min-h-0 flex-1 overflow-y-auto px-6 py-7 sm:px-8">
-        {step === 0 ? (
-          <div>
+      <div className="min-h-0 flex-1 overflow-y-auto px-6 sm:px-8">
+          <section className="py-7">
             <h3 className="text-base font-extrabold text-brown">Item yang kamu inginkan</h3>
             <p className="mt-2 text-sm italic leading-6 text-brown/40">Pembayaran admin fee hanya dilakukan jika pemilik item menyetujui request-mu.</p>
             <div className="mt-6 max-w-[250px]"><SwapItem index={productIndex} /></div>
-          </div>
-        ) : (
-          <div>
+          </section>
+
+          <section className="border-t border-line py-7">
             <h3 className="text-base font-extrabold text-brown">Pilih pakaian untuk ditukar</h3>
             <p className="mt-2 text-sm text-brown/45">Kamu dapat memilih beberapa item untuk diajukan.</p>
             <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
               {Array.from({ length: 6 }, (_, index) => <SwapItem key={index} index={index} selected={selectedItems.includes(index)} onSelect={() => toggleItem(index)} />)}
             </div>
-          </div>
-        )}
+          </section>
       </div>
 
       <div className="flex gap-3 border-t border-line bg-white px-6 py-5 sm:justify-end sm:px-8">
-        <button type="button" onClick={step === 0 ? closeDrawer : () => setStep(0)} className="min-h-12 flex-1 rounded-full border border-gold px-7 font-bold text-gold sm:flex-none">{step === 0 ? 'Batal' : 'Kembali'}</button>
-        <button type="button" onClick={step === 0 ? () => setStep(1) : closeDrawer} disabled={step === 1 && selectedItems.length === 0} className="inline-flex min-h-12 flex-[1.4] items-center justify-center gap-2 rounded-full bg-brown px-8 font-bold text-white disabled:cursor-not-allowed disabled:opacity-40 sm:flex-none"><IconProductSwap className="h-5 w-5" />{step === 0 ? 'Pilih Koleksi' : 'Ajukan Tukar'}</button>
+        <button type="button" onClick={closeDrawer} className="min-h-12 flex-1 rounded-full border border-gold px-7 font-bold text-gold sm:flex-none">Batal</button>
+        <button type="button" onClick={closeDrawer} disabled={selectedItems.length === 0} className="inline-flex min-h-12 flex-[1.4] items-center justify-center gap-2 rounded-full bg-brown px-8 font-bold text-white disabled:cursor-not-allowed disabled:opacity-40 sm:flex-none"><IconProductSwap className="h-5 w-5" />Ajukan Tukar</button>
       </div>
     </SideDrawer>
   );
