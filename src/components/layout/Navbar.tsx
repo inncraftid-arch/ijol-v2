@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { ComponentType, SVGProps } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -15,24 +15,23 @@ import {
   IconWhatsapp,
 } from '@/assets/icons/navbar';
 import { assets } from '@/constants/assets';
-import { createWhatsAppUrl } from '@/constants/contact';
-import Container from '@/components/common/Container';
-import { useOverlay } from '@/contexts/overlay-context';
+import { createWhatsAppUrl } from '@/utils/createWhatsAppUrl';
+import Container from '@/components/layout/Container';
+import { useOverlay } from '@/app/overlay-context';
+import { ROUTES } from '@/constants/routes';
 
 const navItems = [
-  { labelKey: 'nav.about', href: '#about' },
+  { labelKey: 'nav.about', href: '#contact' },
   { labelKey: 'nav.donate', href: '#donate' },
-  { labelKey: 'nav.recycle', href: '#recycle' },
+  { labelKey: 'nav.recycle', href: '#mic' },
 ];
-
-const whatsappUrl = createWhatsAppUrl('Halo IJOL, saya ingin bertanya tentang IJOL.');
 
 const loggedInUser = {
   name: 'Krisna',
-  avatar: assets.signUpThree,
+  avatar: assets.profileAvatar,
   wardrobeCount: 0,
   swapTokenCount: 0,
-  swapListHref: '/swap-list',
+  swapListHref: ROUTES.swapList,
   ordersHref: '#orders',
 };
 
@@ -44,10 +43,10 @@ type ProfileMenuItem = {
 };
 
 const profileMenuItems: ProfileMenuItem[] = [
-  { label: 'My Wardrobe', value: loggedInUser.wardrobeCount, Icon: IconWardrobe, href: '#wardrobe' },
-  { label: 'Swap Token', value: loggedInUser.swapTokenCount, Icon: IconToken, href: '#token' },
-  { label: 'Swap List', Icon: IconSwapList, href: loggedInUser.swapListHref },
-  { label: 'Orders', Icon: IconOrders, href: loggedInUser.ordersHref },
+  { label: 'profile.wardrobe', value: loggedInUser.wardrobeCount, Icon: IconWardrobe, href: ROUTES.wardrobe },
+  { label: 'profile.token', value: loggedInUser.swapTokenCount, Icon: IconToken, href: '#token' },
+  { label: 'profile.swapList', Icon: IconSwapList, href: loggedInUser.swapListHref },
+  { label: 'profile.orders', Icon: IconOrders, href: loggedInUser.ordersHref },
 ];
 
 const Navbar = () => {
@@ -55,14 +54,34 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
   const [isSignedIn, setIsSignedIn] = useState(true);
+  const [isScrolled, setIsScrolled] = useState(false);
   const { openUpload } = useOverlay();
+  const whatsappUrl = createWhatsAppUrl(t('nav.whatsappMessage'));
+
+  useEffect(() => {
+    const updateNavbarBackground = () => setIsScrolled(window.scrollY > 0);
+
+    updateNavbarBackground();
+    window.addEventListener('scroll', updateNavbarBackground, { passive: true });
+
+    return () => window.removeEventListener('scroll', updateNavbarBackground);
+  }, []);
 
   return (
     <>
-      <header className="fixed left-0 right-0 top-0 z-50 border-b border-[#EAE1D8] bg-white transition duration-300">
+      <header
+        className={`fixed left-0 right-0 top-0 z-50 border-b border-[#EAE1D8] transition-colors duration-300 ${
+          isScrolled ? 'bg-white' : 'bg-white/30'
+        }`}
+      >
         <Container>
-          <nav className="flex h-[var(--height-navbar)] items-center justify-between">
-            <Link to="/" className="inline-flex items-center" aria-label="IJOL home">
+          <nav className="flex h-navbar items-center justify-between">
+            <Link
+              to={ROUTES.home}
+              className="inline-flex items-center"
+              aria-label={t('aria.home')}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
               <img src={assets.logoLight} alt="IJOL" className="h-9 w-auto" />
             </Link>
 
@@ -95,11 +114,15 @@ const Navbar = () => {
               </button>
               <button
                 type="button"
-                className="grid h-12 w-12 place-items-center rounded-full bg-brown text-white transition hover:bg-brown-deep"
+                className="grid h-12 w-12 overflow-hidden rounded-full bg-brown text-white transition hover:bg-brown-deep"
                 onClick={() => setProfileOpen((value) => !value)}
                 aria-label={t('nav.profile')}
               >
-                <IconProfile className="h-6 w-6" aria-hidden="true" />
+                {isSignedIn ? (
+                  <img src={loggedInUser.avatar} alt="" className="h-full w-full object-cover" aria-hidden="true" />
+                ) : (
+                  <IconProfile className="h-6 w-6 place-self-center" aria-hidden="true" />
+                )}
               </button>
             </div>
 
@@ -107,7 +130,7 @@ const Navbar = () => {
               type="button"
               className="grid h-11 w-11 place-items-center rounded-full bg-brown text-white md:hidden"
               onClick={() => setMenuOpen((value) => !value)}
-              aria-label="Open menu"
+              aria-label={t('nav.openMenu')}
             >
               <span className="text-xl">{menuOpen ? 'x' : '='}</span>
             </button>
@@ -123,10 +146,21 @@ const Navbar = () => {
                 {t(item.labelKey)}
               </a>
             ))}
-            <button type="button" onClick={() => { setMenuOpen(false); openUpload(); }} className="rounded-full bg-gold px-5 py-3 text-center text-white">
+            <button
+              type="button"
+              onClick={() => {
+                setMenuOpen(false);
+                openUpload();
+              }}
+              className="rounded-full bg-gold px-5 py-3 text-center text-white"
+            >
               {t('nav.upload')}
             </button>
-            <Link to="/login" onClick={() => setMenuOpen(false)} className="rounded-full bg-gold px-5 py-3 text-center text-white">
+            <Link
+              to={ROUTES.login}
+              onClick={() => setMenuOpen(false)}
+              className="rounded-full bg-gold px-5 py-3 text-center text-white"
+            >
               {t('nav.signin')}
             </Link>
           </div>
@@ -136,7 +170,7 @@ const Navbar = () => {
       {profileOpen && (
         <button
           type="button"
-          aria-label="Close profile dropdown"
+          aria-label={t('nav.closeProfile')}
           className="fixed inset-0 z-40 cursor-default bg-ink/55 backdrop-blur-[1px]"
           onClick={() => setProfileOpen(false)}
         />
@@ -144,24 +178,37 @@ const Navbar = () => {
 
       {profileOpen && (
         <div
-          className={`fixed right-[max(2rem,calc((100vw-1280px)/2+2rem))] top-24 z-50 rounded-2xl bg-white shadow-soft ${
+          className={`fixed right-[max(2rem,calc((100vw-var(--width-container))/2+2rem))] top-24 z-50 rounded-2xl bg-white shadow-soft ${
             isSignedIn ? 'w-[min(248px,calc(100vw-2rem))] p-3' : 'w-[min(152px,calc(100vw-2rem))] p-2'
           }`}
         >
           {isSignedIn ? (
             <div>
               <div className="mb-3 flex flex-col items-center gap-1.5 border-b border-line pb-3">
-                <img src={loggedInUser.avatar} alt={loggedInUser.name} className="h-12 w-12 rounded-full object-cover" />
-                <p className="text-sm font-bold text-gold">{loggedInUser.name}</p>
+                <img
+                  src={loggedInUser.avatar}
+                  alt={loggedInUser.name}
+                  className="h-12 w-12 rounded-full object-cover"
+                />
+                <p className="text-sm font-semibold text-gold">{loggedInUser.name}</p>
               </div>
               {profileMenuItems.map(({ label, value, Icon, href }) => (
-                <Link key={label} to={href} onClick={() => setProfileOpen(false)} className="flex items-center justify-between rounded-xl px-2 py-2 text-sm text-brown transition hover:bg-cream">
+                <Link
+                  key={label}
+                  to={href}
+                  onClick={() => setProfileOpen(false)}
+                  className="flex items-center justify-between rounded-xl px-2 py-2 text-sm text-brown transition hover:bg-cream"
+                >
                   <span className="inline-flex items-center gap-2.5 font-medium">
                     <Icon className="h-4.5 w-4.5 text-brown" aria-hidden="true" />
-                    {label}
+                    {t(label)}
                   </span>
                   <span className="inline-flex min-w-6 items-center justify-end font-bold text-gold">
-                    {typeof value === 'number' ? value : <IconChevronRight className="h-4.5 w-4.5 text-brown" aria-hidden="true" />}
+                    {typeof value === 'number' ? (
+                      value
+                    ) : (
+                      <IconChevronRight className="h-4.5 w-4.5 text-brown" aria-hidden="true" />
+                    )}
                   </span>
                 </Link>
               ))}
@@ -171,12 +218,15 @@ const Navbar = () => {
                 className="mt-3 inline-flex w-full items-center justify-center gap-2 border-t border-line pt-3 text-sm font-bold text-coral"
               >
                 <IconSignOut className="h-4.5 w-4.5" aria-hidden="true" />
-                Sign Out
+                {t('profile.signOut')}
               </button>
             </div>
           ) : (
             <div>
-              <Link to="/login" className="inline-flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-xl px-2.5 py-2.5 text-center text-sm font-bold text-gold transition hover:bg-cream">
+              <Link
+                to={ROUTES.login}
+                className="inline-flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-xl px-2.5 py-2.5 text-center text-sm font-bold text-gold transition hover:bg-cream"
+              >
                 <IconSignIn className="h-4 w-4 shrink-0" aria-hidden="true" />
                 {t('nav.signin')}
               </Link>

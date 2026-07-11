@@ -1,0 +1,25 @@
+{
+  "drawer": {
+    "eyebrow": "Request Swap",
+    "title": "Request Tukar Pakaianmu",
+    "description": "Kamu tertarik dengan item ini? Pilih koleksimu untuk mengajukan swap.",
+    "wanted": "Item yang kamu inginkan",
+    "fee": "Pembayaran admin fee hanya dilakukan jika pemilik item menyetujui request-mu.",
+    "choose": "Pilih pakaian untuk ditukar",
+    "multiple": "Kamu dapat memilih beberapa item untuk diajukan."
+  },
+  "list": {
+    "home": "Beranda",
+    "title": "Swap List",
+    "description": "Kalau dalam 3 hari belum ada konfirmasi dari pemilik, pengajuan Swap akan batal otomatis. Kamu bisa coba pakaian lain, ya!",
+    "mine": "Swap Saya",
+    "request": "Request",
+    "saved": "Item terselamatkan dari landfill",
+    "impact": "1 Pcs = 4.0 kg CO₂ dihindari",
+    "today": "Hari ini",
+    "hourAgo": "1 jam lalu",
+    "waiting": "Menunggu Konfirmasi",
+    "completed": "Selesai",
+    "failed": "Gagal"
+  }
+}

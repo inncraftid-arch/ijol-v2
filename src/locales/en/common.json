@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "about": "About Us",
+    "donate": "Donate",
+    "recycle": "Recycle",
+    "contact": "Contact Us",
+    "upload": "Upload Clothes",
+    "profile": "Open profile",
+    "signin": "Sign In / Sign Up",
+    "openMenu": "Open menu",
+    "closeProfile": "Close profile menu",
+    "whatsappMessage": "Hello IJOL, I would like to learn more about IJOL."
+  },
+  "profile": {
+    "wardrobe": "My Wardrobe",
+    "token": "Swap Token",
+    "swapList": "Swap List",
+    "orders": "Orders",
+    "signOut": "Sign Out"
+  },
+  "actions": {
+    "buy": "Buy",
+    "swap": "Swap",
+    "cancel": "Cancel",
+    "close": "Close panel",
+    "browse": "Browse",
+    "reject": "Reject",
+    "submitSwap": "Submit Swap"
+  },
+  "footer": {
+    "marquee": "KEEP IT CIRCULAR",
+    "description": "is a circular fashion platform from Indonesia. Upload clothes you no longer wear to earn swap tokens and exchange them with people nearby.",
+    "services": "Services",
+    "company": "Company",
+    "legal": "Legal",
+    "swapClothes": "Swap Clothes",
+    "donate": "Donate",
+    "fiber": "IJOL Fiber - Recycle",
+    "about": "About Us",
+    "career": "Careers",
+    "terms": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "copyright": "© 2026 Putar Baik Terus | IJOL"
+  },
+  "aria": { "home": "IJOL home", "breadcrumb": "Breadcrumb" }
+}

@@ -1,0 +1,34 @@
+{
+  "catalog": {
+    "home": "Home",
+    "label": "All Catalog",
+    "title": "All Outfit Collections",
+    "description": "Swipe, match, and swap. Each card shows the estimated CO₂ saved by choosing circular fashion.",
+    "filters": { "all": "All", "unisex": "Unisex", "men": "Men", "women": "Women" }
+  },
+  "wardrobe": {
+    "home": "Home",
+    "label": "My Wardrobe",
+    "title": "Wardrobe Collection",
+    "description": "If there is no confirmation within 3 days, the swap request will be automatically cancelled. You can try another item.",
+    "tabs": { "listed": "Listed", "pending": "Waiting QC" }
+  },
+  "card": {
+    "view": "View {{title}}",
+    "saved": "Saves {{carbon}} kg CO₂",
+    "size": "Size: {{size}}",
+    "review": "In Review"
+  },
+  "detail": {
+    "home": "Home",
+    "collection": "Collection",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "select": "Select photo {{number}}",
+    "description": "A maroon and cream Gaudi crop in good condition that has not been worn for a while.",
+    "preloved": "Preloved",
+    "swap": "Swap",
+    "otherTitle": "More Clothes in the Catalog",
+    "otherDescription": "More outfits that may suit your style."
+  }
+}

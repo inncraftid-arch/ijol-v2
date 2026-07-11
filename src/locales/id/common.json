@@ -1,0 +1,46 @@
+{
+  "nav": {
+    "about": "Tentang Kami",
+    "donate": "Donasi",
+    "recycle": "Daur Ulang",
+    "contact": "Hubungi Kami",
+    "upload": "Upload Pakaian",
+    "profile": "Buka profil",
+    "signin": "Sign In / Sign Up",
+    "openMenu": "Buka menu",
+    "closeProfile": "Tutup menu profil",
+    "whatsappMessage": "Halo IJOL, saya ingin bertanya tentang IJOL."
+  },
+  "profile": {
+    "wardrobe": "My Wardrobe",
+    "token": "Swap Token",
+    "swapList": "Swap List",
+    "orders": "Orders",
+    "signOut": "Sign Out"
+  },
+  "actions": {
+    "buy": "Beli",
+    "swap": "Swap",
+    "cancel": "Batal",
+    "close": "Tutup panel",
+    "browse": "Pilih Foto",
+    "reject": "Tolak",
+    "submitSwap": "Ajukan Tukar"
+  },
+  "footer": {
+    "marquee": "PUTAR BAIK TERUS",
+    "description": "adalah platform fashion sirkular dari Indonesia. Upload pakaian yang tidak lagi kamu pakai untuk mendapat token swap dan tukarkan dengan orang di sekitarmu.",
+    "services": "Layanan",
+    "company": "Perusahaan",
+    "legal": "Legal",
+    "swapClothes": "Tukar Baju",
+    "donate": "Donasi",
+    "fiber": "IJOL Fiber - Daur Ulang",
+    "about": "Tentang Kami",
+    "career": "Karir",
+    "terms": "Syarat dan Ketentuan",
+    "privacy": "Kebijakan Privasi",
+    "copyright": "© 2026 Putar Baik Terus | IJOL"
+  },
+  "aria": { "home": "Beranda IJOL", "breadcrumb": "Jejak navigasi" }
+}

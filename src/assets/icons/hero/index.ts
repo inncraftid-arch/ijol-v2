@@ -1,1 +1,1 @@
-export { IconHeroHanger, IconHeroLeaf, IconHeroShirt, IconHeroStar } from './HeroBadgeIcons';
+export { IconHeroHanger, IconHeroHeart, IconHeroLeaf, IconHeroShirt, IconHeroStar } from './HeroBadgeIcons';

@@ -1,0 +1,112 @@
+{
+  "hero": {
+    "eyebrow": "Swapping unused outfits, because reducing textile waste is the real fit.",
+    "titleStart": "Selamatkan Bumi dari",
+    "titleAccent": "Limbah Tekstil",
+    "titleEnd": "dengan Gaya Baru, Tanpa Beli Baru.",
+    "descriptionStart": "Setiap pakaian yang ditukar adalah satu langkah nyata melawan",
+    "descriptionStrong": "2,3 juta ton",
+    "descriptionEnd": "limbah tekstil Indonesia.",
+    "cta": "Swap sekarang →",
+    "request": "Audrey wants to swap your jacket",
+    "match": "Match Found",
+    "saved": "Saves 24.6 kg CO₂",
+    "token": "1 Clothes = 1 Swap Token",
+    "imageAlt": "Dua pakaian yang siap ditukar"
+  },
+  "impact": {
+    "landfillTitle": "0 Textile to Landfill",
+    "landfillDescription": "Tiga jalur sirkular untuk memperpanjang umur setiap helai pakaian di lemari.",
+    "swapTitle": "How Swap Works",
+    "swapDescription": "Dari swipe sampai paket sampai pintu, semua dalam 6 langkah.",
+    "paths": {
+      "swap": {
+        "title": "Tukar Pakaian",
+        "description": "Kurangi pembelian baru lewat lemari yang saling memperpanjang umur pakai."
+      },
+      "donate": {
+        "title": "Donasi Pakaian",
+        "description": "Pakaian berlebih mengalir ke komunitas yang membutuhkan, bukan ke pembuangan."
+      },
+      "recycle": {
+        "title": "Daur Ulang Pakaian",
+        "description": "Tekstil rusak dipilah dan didaur ulang agar tidak berakhir di landfill."
+      }
+    },
+    "steps": {
+      "search": { "title": "Cari Pakaian Favorit", "description": "Temukan item yang cocok dengan gaya dan ukuranmu." },
+      "offer": { "title": "Ajukan Penawaran", "description": "Pilih pakaian milikmu sebagai opsi pertukaran." },
+      "wait": { "title": "Tunggu Konfirmasi", "description": "Pemilik meninjau penawaran dan menyetujui match." },
+      "approved": { "title": "Pemilik Menyetujui", "description": "Kedua pihak mengunci kesepakatan swap." },
+      "payment": { "title": "Konfirmasi Pembayaran", "description": "Selesaikan biaya layanan dan pengiriman." },
+      "delivery": { "title": "Pakaian Diantar", "description": "Paket sampai ke pintu dan CO₂ tersimpan." }
+    },
+    "guidelines": {
+      "eyebrow": "Panduan Upload",
+      "title": "Aturan Upload Pakaian",
+      "wash": "Cuci sebelum Tukar",
+      "clean": "Bersih & layak pakai",
+      "category": "Semua kategori",
+      "brand": "Branded & non-branded",
+      "underwear": "Bukan pakaian dalam"
+    }
+  },
+  "catalog": {
+    "eyebrow": "Katalog",
+    "title": "Koleksi Outfit",
+    "description": "Swipe, match, dan swap. Tiap kartu menampilkan estimasi CO₂ yang kamu hemat dengan memilih fashion sirkular.",
+    "all": "Semua Katalog →",
+    "tabs": { "unisex": "Unisex", "men": "Pria", "women": "Wanita" }
+  },
+  "trend": {
+    "eyebrow": "Segera Hadir",
+    "title": "Rekomendasi Berdasarkan Tren",
+    "description": "Kamu cari pakaian unik untuk acara tertentu? Lihat pilihan yang bisa kamu tukar di bawah ini."
+  },
+  "sustainability": {
+    "eyebrow": "Live Impact",
+    "title": "Kontribusi nyata, terukur, berkelanjutan",
+    "description": "Pilih caramu, donasi atau daur ulang",
+    "stats": { "donors": "Donatur", "total": "Total pcs", "senders": "Pengirim", "weight": "Total berat" },
+    "units": { "people": "Orang", "received": "Pakaian diterima", "textileKg": "kg tekstil" },
+    "cards": {
+      "donate": {
+        "title": "Donasi Pakaian",
+        "subtitle": "Disalurkan tepat sasaran",
+        "readyUnit": "pcs",
+        "readyLabel": "Siap Didonasikan",
+        "emissionLabel": "Emisi Karbon Tersimpan",
+        "button": "Donasikan Pakaianmu"
+      },
+      "recycle": {
+        "title": "IJOL Fiber - Daur Ulang",
+        "subtitle": "Pakaian menjadi material baru",
+        "readyUnit": "kg tekstil",
+        "readyLabel": "Siap Daur Ulang",
+        "emissionLabel": "Emisi Landfill Tersimpan",
+        "button": "Daur Ulang Pakaian"
+      }
+    },
+    "emissionDetail": "Setara dengan ~28 tahun menyalakan AC 1 PK.",
+    "updated": "Terakhir diperbarui: 22 Mei 2026"
+  },
+  "carbon": {
+    "eyebrow": "Carbon Calculator",
+    "title": "Berapa karbon yang bisa kamu hemat?",
+    "description": "Hitung emisi yang bisa kamu cegah dengan menukar pakaian yang menumpuk di lemari.",
+    "count": "Jumlah pakaian tidak terpakai di lemarimu",
+    "unit": "Pcs",
+    "potential": "Potensi Carbon Unlock",
+    "equivalent": "Setara dengan",
+    "days": "{{days}} hari menyalakan AC 1 PK.",
+    "imageAlt": "Anak memegang bibit tanaman"
+  },
+  "ecosystem": {
+    "badgeDaily": "CSR or Recycler Partner",
+    "badgeClothes": "Potential Collaboration",
+    "title": "Build Indonesia's Circular Fashion Ecosystem",
+    "description": "Brand, NGO, kampus, dan pendaur ulang—bermitra dengan IJOL untuk mengubah limbah tekstil menjadi nilai baru. Bersama, kita tutup siklus dan jaga pakaian tetap berguna, sehingga tidak berakhir di TPA.",
+    "cta": "Hubungi Kami",
+    "imageAlt": "Orang-orang berbagi fashion sirkular"
+  }
+}

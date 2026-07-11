@@ -1,0 +1,14 @@
+{
+  "not_found": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist or has been moved.",
+    "back_home": "Back to Home"
+  },
+  "not_allowed": {
+    "eyebrow": "Error 403",
+    "title": "Access Not Allowed",
+    "description": "Your account does not have permission to open this page. Return to the previous page or continue to the home page.",
+    "back": "Go Back",
+    "back_home": "Go Home"
+  }
+}

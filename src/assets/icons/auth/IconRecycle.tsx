@@ -3,7 +3,13 @@ import type { SVGProps } from 'react';
 const IconRecycle = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-      <path d="M24 34.0001L20 38.0001L24 42.0001" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round" />
+      <path
+        d="M24 34.0001L20 38.0001L24 42.0001"
+        stroke="currentColor"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
       <path
         d="M19.9996 38H37.9996C38.6368 37.9672 39.2569 37.7823 39.8081 37.461C40.3593 37.1397 40.8257 36.6911 41.1683 36.1528C41.5108 35.6145 41.7196 35.0021 41.7773 34.3666C41.8349 33.7312 41.7397 33.0912 41.4996 32.5L40.3996 30.5M17.0716 22L15.6076 16.536L10.1436 18"
         stroke="currentColor"

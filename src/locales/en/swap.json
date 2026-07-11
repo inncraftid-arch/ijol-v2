@@ -1,0 +1,25 @@
+{
+  "drawer": {
+    "eyebrow": "Swap Request",
+    "title": "Request a Clothing Swap",
+    "description": "Interested in this item? Choose items from your collection to submit a swap.",
+    "wanted": "Item you want",
+    "fee": "The admin fee is only paid if the owner accepts your request.",
+    "choose": "Choose clothes to exchange",
+    "multiple": "You can select multiple items to submit."
+  },
+  "list": {
+    "home": "Home",
+    "title": "Swap List",
+    "description": "If the owner does not confirm within 3 days, the swap request will be canceled automatically. You can try another item.",
+    "mine": "My Swap",
+    "request": "Requests",
+    "saved": "Items saved from landfill",
+    "impact": "1 Pc = 4.0 kg CO₂ avoided",
+    "today": "Today",
+    "hourAgo": "1 hour ago",
+    "waiting": "Waiting for Confirmation",
+    "completed": "Completed",
+    "failed": "Failed"
+  }
+}

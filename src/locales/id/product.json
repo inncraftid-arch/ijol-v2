@@ -1,0 +1,34 @@
+{
+  "catalog": {
+    "home": "Beranda",
+    "label": "Semua Katalog",
+    "title": "Semua Koleksi Outfit",
+    "description": "Swipe, match, dan swap. Tiap kartu menampilkan estimasi CO₂ yang kamu hemat dengan memilih fashion sirkular.",
+    "filters": { "all": "Semua", "unisex": "Unisex", "men": "Pria", "women": "Wanita" }
+  },
+  "wardrobe": {
+    "home": "Beranda",
+    "label": "My Wardrobe",
+    "title": "Koleksi Wardrobe",
+    "description": "Kalau dalam 3 hari belum ada konfirmasi dari pemilik, pengajuan Swap akan batal otomatis. Kamu bisa coba pakaian lain, ya!",
+    "tabs": { "listed": "Listed", "pending": "Menunggu QC" }
+  },
+  "card": {
+    "view": "Lihat {{title}}",
+    "saved": "Hemat {{carbon}} kg CO₂",
+    "size": "Ukuran: {{size}}",
+    "review": "Dalam Review"
+  },
+  "detail": {
+    "home": "Beranda",
+    "collection": "Koleksi",
+    "previous": "Foto sebelumnya",
+    "next": "Foto berikutnya",
+    "select": "Pilih foto {{number}}",
+    "description": "Crop Gaudi warna kombinasi maroon dan cream, kondisi masih bagus dan sudah lama tidak dipakai.",
+    "preloved": "Preloved",
+    "swap": "Swap",
+    "otherTitle": "Pakaian Lain di Katalog",
+    "otherDescription": "Outfit lain yang mungkin cocok dengan gayamu."
+  }
+}

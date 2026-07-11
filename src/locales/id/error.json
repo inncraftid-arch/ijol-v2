@@ -1,0 +1,14 @@
+{
+  "not_found": {
+    "title": "Halaman Tidak Ditemukan",
+    "description": "Maaf, halaman yang kamu cari tidak ada atau telah dipindahkan.",
+    "back_home": "Kembali ke Beranda"
+  },
+  "not_allowed": {
+    "eyebrow": "Error 403",
+    "title": "Akses Tidak Diizinkan",
+    "description": "Akunmu tidak memiliki izin untuk membuka halaman ini. Kembali ke halaman sebelumnya atau lanjutkan ke beranda.",
+    "back": "Kembali",
+    "back_home": "Ke Beranda"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "eyebrow": "Swapping unused outfits, because reducing textile waste is the real fit.",
+    "titleStart": "Save the Earth from",
+    "titleAccent": "Textile Waste",
+    "titleEnd": "with a New Style, Without Buying New.",
+    "descriptionStart": "Every swapped item is a real step against",
+    "descriptionStrong": "2.3 million tons",
+    "descriptionEnd": "of textile waste in Indonesia.",
+    "cta": "Swap now →",
+    "request": "Audrey wants to swap your jacket",
+    "match": "Match Found",
+    "saved": "Saves 24.6 kg CO₂",
+    "token": "1 Clothing Item = 1 Swap Token",
+    "imageAlt": "Two clothes ready to swap"
+  },
+  "impact": {
+    "landfillTitle": "0 Textiles to Landfill",
+    "landfillDescription": "Three circular paths extend the life of every item in your wardrobe.",
+    "swapTitle": "How Swap Works",
+    "swapDescription": "From swiping to delivery at your door in 6 simple steps.",
+    "paths": {
+      "swap": {
+        "title": "Swap Clothes",
+        "description": "Reduce new purchases by extending clothing life through shared wardrobes."
+      },
+      "donate": {
+        "title": "Donate Clothes",
+        "description": "Extra clothes reach communities in need instead of disposal sites."
+      },
+      "recycle": {
+        "title": "Recycle Clothes",
+        "description": "Damaged textiles are sorted and recycled instead of ending up in landfill."
+      }
+    },
+    "steps": {
+      "search": { "title": "Find a Favorite", "description": "Discover an item that matches your style and size." },
+      "offer": { "title": "Make an Offer", "description": "Choose one of your clothes as an exchange option." },
+      "wait": {
+        "title": "Wait for Confirmation",
+        "description": "The owner reviews your offer and approves the match."
+      },
+      "approved": { "title": "Owner Approves", "description": "Both parties lock in the swap agreement." },
+      "payment": { "title": "Confirm Payment", "description": "Complete the service and shipping fees." },
+      "delivery": { "title": "Clothes Delivered", "description": "The package reaches your door and CO₂ stays saved." }
+    },
+    "guidelines": {
+      "eyebrow": "Upload Guideline",
+      "title": "Clothing Upload Rules",
+      "wash": "Wash before swapping",
+      "clean": "Clean and wearable",
+      "category": "All categories",
+      "brand": "Branded & non-branded",
+      "underwear": "No underwear"
+    }
+  },
+  "catalog": {
+    "eyebrow": "Catalog",
+    "title": "Outfit Collection",
+    "description": "Swipe, match, and swap. Each card shows the estimated CO₂ saved by choosing circular fashion.",
+    "all": "View All Catalog →",
+    "tabs": { "unisex": "Unisex", "men": "Men", "women": "Women" }
+  },
+  "trend": {
+    "eyebrow": "Coming Soon",
+    "title": "Trend-Based Recommendations",
+    "description": "Looking for a unique outfit for a special event? Explore items available to swap below."
+  },
+  "sustainability": {
+    "eyebrow": "Live Impact",
+    "title": "Real, measurable, sustainable contributions",
+    "description": "Choose your path: donate or recycle",
+    "stats": { "donors": "Donors", "total": "Total pieces", "senders": "Senders", "weight": "Total weight" },
+    "units": { "people": "People", "received": "Clothes received", "textileKg": "kg textile" },
+    "cards": {
+      "donate": {
+        "title": "Donate Clothes",
+        "subtitle": "Delivered where they matter",
+        "readyUnit": "pcs",
+        "readyLabel": "Ready to Donate",
+        "emissionLabel": "Carbon Emissions Saved",
+        "button": "Donate Your Clothes"
+      },
+      "recycle": {
+        "title": "IJOL Fiber - Recycling",
+        "subtitle": "Clothes become new materials",
+        "readyUnit": "kg textile",
+        "readyLabel": "Ready to Recycle",
+        "emissionLabel": "Landfill Emissions Saved",
+        "button": "Recycle Clothes"
+      }
+    },
+    "emissionDetail": "Equivalent to running a 1 PK AC for ~28 years.",
+    "updated": "Last updated: May 22, 2026"
+  },
+  "carbon": {
+    "eyebrow": "Carbon Calculator",
+    "title": "How much carbon can you save?",
+    "description": "Calculate emissions prevented by swapping clothes sitting unused in your wardrobe.",
+    "count": "Unused clothes in your wardrobe",
+    "unit": "Pcs",
+    "potential": "Potential Carbon Unlocked",
+    "equivalent": "Equivalent to",
+    "days": "running a 1 PK AC for {{days}} days.",
+    "imageAlt": "Child holding a seedling"
+  },
+  "ecosystem": {
+    "badgeDaily": "Daily CO₂e Protected",
+    "badgeClothes": "Clothes Saved",
+    "title": "Build Indonesia's Circular Fashion Ecosystem",
+    "description": "Brands, NGOs, communities, and style makers can move together. IJOL connects swapping, donating, and recycling in one measurable fashion ecosystem.",
+    "cta": "Contact Us",
+    "imageAlt": "People sharing circular fashion"
+  }
+}
